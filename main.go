@@ -50,7 +50,6 @@ func main() {
 	brasilCepAPIUrl := "https://brasilapi.com.br/api/cep/v1/" + *cep
 	viaCepAPIUrl := "http://viacep.com.br/ws/" + *cep + "/json/"
 
-	//faça a requisição para o brasilcep
 	go func(url string) {
 		ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
 		defer cancel()
